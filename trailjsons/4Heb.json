@@ -1,0 +1,61 @@
+{
+    "trailId": "trail-givat-yoav-nator",
+    "name": "Givat Yoav – Nator Trail",
+    "description": "מנקודת המפגש של ערוץ נחל סמך עם נחל אל-על, מתחילים לטפס לכיוון נטור ואום אל-קנטיר. חלק מהעליות תלולות למדי, ולכן ייתכן שתעדיפו ללכת ברגל עד שתגיעו לקו הטיית המים הסורי. משם הדרך לאום אל-קנטיר ולרכב קצרה.",
+    "media": [
+        {
+            "id": "media-001",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_44dddb001a4b4bc1b16ad7ce7c0e76ad~mv2.jpg",
+            "description": "נקודת התחלה בגבעת יואב. ניתן להחנות את הרכב כאן. מכיוון שמדובר במסלול חד כיווני, יש להוריד רכב בנקודת הסיום. אל תשכחו את המפתח."
+        },
+        {
+            "id": "media-002",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_94111ae6cbc9496ba42e9f30937e2394~mv2.jpg",
+            "description": "קרן עין גב היא הגבעה בצורת חרוט בצד שמאל."
+        },
+        {
+            "id": "media-003",
+            "type": "video",
+            "url": "https://video.wixstatic.com/video/c73128_a4eb4059ef9e4518bb331e8f5093176d/1080p/mp4/file.mp4",
+            "description": ""
+        },
+        {
+            "id": "media-004",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_062175078e814b70bcd93356c4c09f07~mv2.jpg",
+            "description": ""
+        },
+        {
+            "id": "media-005",
+            "type": "video",
+            "url": "https://video.wixstatic.com/video/c73128_c4742c9fb42541cbbb9ea2517f09a607/1080p/mp4/file.mp4",
+            "description": "הר תבור – ההר העגול."
+        },
+        {
+            "id": "media-006",
+            "type": "video",
+            "url": "https://video.wixstatic.com/video/c73128_4554ece55f8549a0a8ad4005298a4bd4/1080p/mp4/file.mp4",
+            "description": "רצתם לאורך נחל סמך (בצד שמאל, צפונה)."
+        },
+        {
+            "id": "media-007",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_c3b29a4ae7d54dc4a613f7c160772c9b~mv2.jpeg",
+            "description": "מנקודת המפגש של ערוץ נחל סמך עם נחל אל-על, מתחילים לטפס לכיוון נטור ואום אל-קנטיר. חלק מהעליות תלולות למדי, ולכן ייתכן שתעדיפו ללכת ברגל עד שתגיעו לקו הטיית המים הסורי. משם הדרך לאום אל-קנטיר ולרכב קצרה."
+        },
+        {
+            "id": "media-008",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_5b9ae518d61049eb9bdde9ff4fe7a712~mv2.jpeg",
+            "description": "נקודת סיום: זו התחנה האחרונה, אזור החניה ליד האתר הארכיאולוגי הרשמי. ניתן להשאיר את הרכב כאן. אם יש לכם זמן ואנרגיה, בהחלט כדאי לבקר באתר הארכיאולוגי של אום אל-קנטיר."
+        },
+        {
+            "id": "media-009",
+            "type": "video",
+            "url": "https://video.wixstatic.com/video/c73128_f9270759dc7a4e99a116c2ec8a03e51b/1080p/mp4/file.mp4",
+            "description": "זהו המסלול התלת-ממדי."
+        }
+    ]
+}

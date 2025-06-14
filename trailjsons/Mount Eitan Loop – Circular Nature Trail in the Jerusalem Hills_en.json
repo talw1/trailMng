@@ -1,0 +1,67 @@
+{
+    "trailId": "Mount Eitan Loop – Circular Nature Trail in the Jerusalem Hills",
+    "name": " Mount Eitan Loop",
+    "description": "Mount Eitan, one of the highest peaks in the Jerusalem Hills (≈ 800 m / 2,625 ft), lies at the heart of the Sataf Forest and forms part of the mountain chain surrounding the city.\nA 7.8 km (4.8 mi) circular dirt track encircles the mountain, offering sweeping views of the Jerusalem range, as well as Nahal Sorek, Nahal Tzova, and other nearby valleys.\n🏃‍♂️ Trail Character\nA wide, well-maintained path with gentle climbs and descents that are not especially demanding.\nExpect lush scenery, crisp mountain air, and an authentic sense of nature along the way.\n\nNo car shuttle needed – the start and finish are at the same spot.",
+    "media": [
+        {
+            "id": "media-001",
+            "type": "video",
+            "url": "https://video.wixstatic.com/video/c73128_3a5c82c7af8f4300ac831d41a9bff603/720p/mp4/file.mp4",
+            "description": ""
+        },
+        {
+            "id": "media-002",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_9e229eadc5ad40df92dc58da24126332~mv2.jpg",
+            "description": "Park in the Upper Sataf lot (enter “Sataf – Upper Parking” in Waze).\nAlthough the loop can be run in either direction, the description below assumes a west-side start above Nahal Tzova.\n\nFrom the lot, walk back a few dozen metres along the road you arrived on; a short staircase descends to the path that marks the beginning of the loop.\nAt this point you’ll find a large signboard with a map and route explanation. "
+        },
+        {
+            "id": "media-003",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_8662c482da5f4e90b5bf48e06cbd9490~mv2.jpg",
+            "description": "The entire trail is marked with red blazes and clear distance markers from the starting point."
+        },
+        {
+            "id": "media-004",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_82ce30da381d4a7197a2f6bcde75fadd~mv2.jpg",
+            "description": ""
+        },
+        {
+            "id": "media-005",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_7ecdcbb094024ca3bd3ef9bf867488d3~mv2.jpg",
+            "description": ""
+        },
+        {
+            "id": "media-006",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_53ea851f9ef94bc59c2383e32fd0b661~mv2.jpg",
+            "description": ""
+        },
+        {
+            "id": "media-007",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_8f09451e23c848d68bd5d4e9952cc544~mv2.jpg",
+            "description": ""
+        },
+        {
+            "id": "media-008",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_0cfc9d8fc33247bb9f4c31400a077367~mv2.jpg",
+            "description": ""
+        },
+        {
+            "id": "media-009",
+            "type": "image",
+          "url": "https://static.wixstatic.com/media/c73128_ffc36df618664e59a050629c2cd6b418~mv2.jpg",
+            "description": "A final way-marker points to the parking area about 100 m farther up the path, bringing you full circle to the trail’s starting point."
+        },
+        {
+            "id": "media-010",
+            "type": "video",
+            "url": "https://video.wixstatic.com/video/c73128_450be88ff7624f2883e75c3ee61a5ce9/1080p/mp4/file.mp4",
+            "description": ""
+        }
+    ]
+}
