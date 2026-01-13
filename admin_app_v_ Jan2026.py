@@ -1,8 +1,29 @@
 import streamlit as st
 import json
-import matplotlib.pyplot as plt
 import gpxpy
-import base64
+from typing import List, Dict, Any
+
+# Constants for media item styling
+FRAME_COLORS = ["#FFDCDC", "#DCF7FF", "#DCFFDC", "#FFFBDC", "#FFEDDC", "#E6E6FA", "#D4EDDA"]
+BORDER_COLORS = ["#FF6347", "#00BFFF", "#32CD32", "#FFD700", "#FF8C00", "#9370DB", "#20B2AA"]
+
+
+def build_trail_json(trail_id: str, name: str, description: str, 
+                     media_list: List[Dict], lang_suffix: str) -> Dict[str, Any]:
+    """Build trail JSON for a specific language."""
+    return {
+        "trailId": trail_id,
+        "name": name,
+        "description": description,
+        "media": [
+            {
+                "id": m.get("id"),
+                "type": m.get("type"),
+                "url": m.get("url"),
+                "description": m.get(f"description_{lang_suffix}")
+            } for m in media_list
+        ]
+    }
 
 
 # Function to create or edit trail description JSON
@@ -101,33 +122,12 @@ def create_or_edit_trail_description():
             st.session_state.media_list.insert(0, {})
             st.rerun()
 
-        # Define a list of colors for the individual media item frames (distinct and vibrant)
-        frame_colors = [
-            "#FFDCDC",  # Light Red
-            "#DCF7FF",  # Light Blue
-            "#DCFFDC",  # Light Green
-            "#FFFBDC",  # Light Yellow
-            "#FFEDDC",  # Light Orange
-            "#E6E6FA",  # Lavender
-            "#D4EDDA"   # Mint Green
-        ]
-        border_colors = [
-            "#FF6347",  # Tomato
-            "#00BFFF",  # Deep Sky Blue
-            "#32CD32",  # Lime Green
-            "#FFD700",  # Gold
-            "#FF8C00",  # Dark Orange
-            "#9370DB",  # Medium Purple
-            "#20B2AA"   # Light Sea Green
-        ]
-
-
         # Media fields
         for i, media_item in enumerate(st.session_state.media_list):
             with st.container():
                 # Cycle through the colors for each media item's frame
-                bg_color = frame_colors[i % len(frame_colors)]
-                b_color = border_colors[i % len(border_colors)] # Use a distinct border color
+                bg_color = FRAME_COLORS[i % len(FRAME_COLORS)]
+                b_color = BORDER_COLORS[i % len(BORDER_COLORS)]
                 st.markdown(
                     f"""
                     <div style="background-color: {bg_color}; border: 3px solid {b_color}; padding: 18px; border-radius: 10px; margin-bottom: 12px; margin-top: 12px;">
@@ -168,79 +168,110 @@ def create_or_edit_trail_description():
 
     # Preview and download
     if st.button("Preview and Download JSONs"):
-        # English JSON
-        trail_data_en = {
-            "trailId": trail_id,
-            "name": trail_name_en,
-            "description": trail_description_en,
-            "media": [
-                {
-                    "id": media.get("id"),
-                    "type": media.get("type"),
-                    "url": media.get("url"),
-                    "description": media.get("description_en")
-                } for media in st.session_state.media_list
-            ]
-        }
+        # Validation
+        if not trail_id.strip():
+            st.error("⚠️ Trail ID is required!")
+            return
+        
+        if not st.session_state.media_list:
+            st.warning("⚠️ No media items added.")
+
+        # Build JSON using helper function
+        trail_data_en = build_trail_json(trail_id, trail_name_en, trail_description_en,
+                                         st.session_state.media_list, "en")
+        trail_data_he = build_trail_json(trail_id, trail_name_he, trail_description_he,
+                                         st.session_state.media_list, "he")
+
+        # English JSON Preview and Download
         st.subheader("English JSON Preview")
         st.json(trail_data_en)
-        json_data_en = json.dumps(trail_data_en, ensure_ascii=False, indent=4)
-        b64_en = base64.b64encode(json_data_en.encode()).decode()
-        href_en = f'<a href="data:file/json;base64,{b64_en}" download="{trail_id}_en.json">Download English JSON File</a>'
-        st.markdown(href_en, unsafe_allow_html=True)
+        st.download_button(
+            label="📥 Download English JSON",
+            data=json.dumps(trail_data_en, ensure_ascii=False, indent=4),
+            file_name=f"{trail_id}_en.json",
+            mime="application/json",
+            key="download_en"
+        )
 
-        # Hebrew JSON
-        trail_data_he = {
-            "trailId": trail_id,
-            "name": trail_name_he,
-            "description": trail_description_he,
-            "media": [
-                {
-                    "id": media.get("id"),
-                    "type": media.get("type"),
-                    "url": media.get("url"),
-                    "description": media.get("description_he")
-                } for media in st.session_state.media_list
-            ]
-        }
+        # Hebrew JSON Preview and Download
         st.subheader("Hebrew JSON Preview")
         st.json(trail_data_he)
-        json_data_he = json.dumps(trail_data_he, ensure_ascii=False, indent=4)
-        b64_he = base64.b64encode(json_data_he.encode()).decode()
-        href_he = f'<a href="data:file/json;base64,{b64_he}" download="{trail_id}_he.json">Download Hebrew JSON File</a>'
-        st.markdown(href_he, unsafe_allow_html=True)
+        st.download_button(
+            label="📥 Download Hebrew JSON",
+            data=json.dumps(trail_data_he, ensure_ascii=False, indent=4),
+            file_name=f"{trail_id}_he.json",
+            mime="application/json",
+            key="download_he"
+        )
 
 
 # GPX graph
 def display_gpx_graph():
     """
-    Displays a graph of a GPX file.
+    Displays a graph of a GPX file with track map and elevation profile.
 
-    This function allows uploading a GPX file and displays a plot of the track.
+    This function allows uploading a GPX file and displays:
+    - Track map (latitude vs longitude)
+    - Elevation profile (elevation vs distance)
+    - Key statistics (distance, min/max elevation)
     """
+    import matplotlib.pyplot as plt  # Lazy import for faster app startup
+    
     st.header("GPX Graph")
     uploaded_file = st.file_uploader("Upload GPX file", type=["gpx"])
+    
     if uploaded_file is not None:
         try:
             gpx = gpxpy.parse(uploaded_file)
-            latitudes, longitudes = [], []
+            data = {"lat": [], "lon": [], "ele": [], "dist": []}
+            total_dist = 0
+            prev_point = None
+            
             for track in gpx.tracks:
                 for segment in track.segments:
                     for point in segment.points:
-                        latitudes.append(point.latitude)
-                        longitudes.append(point.longitude)
+                        data["lat"].append(point.latitude)
+                        data["lon"].append(point.longitude)
+                        data["ele"].append(point.elevation if point.elevation else 0)
+                        if prev_point:
+                            total_dist += point.distance_2d(prev_point)
+                        data["dist"].append(total_dist / 1000)  # Convert to km
+                        prev_point = point
 
-            if not latitudes or not longitudes:
+            if not data["lat"]:
                 st.warning("No track points found in the GPX file.")
                 return
 
-            fig, ax = plt.subplots()
-            ax.plot(longitudes, latitudes, marker='o', linestyle='-')
-            ax.set_xlabel("Longitude")
-            ax.set_ylabel("Latitude")
-            ax.set_title("GPX Track")
-            ax.grid(True)
+            # Create two plots side by side
+            fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4))
+            
+            # Track map
+            ax1.plot(data["lon"], data["lat"], 'b-', linewidth=2)
+            ax1.plot(data["lon"][0], data["lat"][0], 'go', markersize=10, label='Start')
+            ax1.plot(data["lon"][-1], data["lat"][-1], 'ro', markersize=10, label='End')
+            ax1.set_title("Track Map")
+            ax1.set_xlabel("Longitude")
+            ax1.set_ylabel("Latitude")
+            ax1.grid(True, alpha=0.3)
+            ax1.legend()
+            
+            # Elevation profile
+            ax2.fill_between(data["dist"], data["ele"], alpha=0.3, color='green')
+            ax2.plot(data["dist"], data["ele"], 'g-', linewidth=2)
+            ax2.set_title("Elevation Profile")
+            ax2.set_xlabel("Distance (km)")
+            ax2.set_ylabel("Elevation (m)")
+            ax2.grid(True, alpha=0.3)
+            
+            plt.tight_layout()
             st.pyplot(fig)
+            
+            # Display statistics
+            col1, col2, col3 = st.columns(3)
+            col1.metric("📏 Total Distance", f"{total_dist/1000:.2f} km")
+            col2.metric("⬇️ Min Elevation", f"{min(data['ele']):.0f} m")
+            col3.metric("⬆️ Max Elevation", f"{max(data['ele']):.0f} m")
+            
         except Exception as e:
             st.error(f"An error occurred while parsing the GPX file: {e}")
 

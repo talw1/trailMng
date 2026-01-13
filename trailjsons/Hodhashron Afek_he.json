@@ -1,0 +1,49 @@
+{
+    "trailId": "Hodhashron Afek",
+    "name": "",
+    "description": "המסלול מתחיל בפארק האקולוגי הוד השרון, ונמשך דרומה לאורך נחל הדר לאורך 1.3 קילומטרים, עד שהוא מתחבר לשביל ישראל המסומן.\nמשם, המסלול ממשיך מזרחה לאורך נחל הירקון, עד לחניון של מבצר אנטיפטרוס שבפארק אפק.\nלתשומת לבך:\nישנם שני מקומות לאורך המסלול שבהם, אם תתחיל את הריצה מוקדם בבוקר, ייתכן שתצטרך לסטות זמנית מהשביל ולחזור אליו בהמשך, עקב מגבלות גישה או שערים סגורים.",
+    "media": [
+        {
+            "id": "media-001",
+            "type": "video",
+            "url": "https://video.wixstatic.com/video/c73128_f9118b7822e041cd8adc29ea1a986db0/1080p/mp4/file.mp4",
+            "description": ""
+        },
+        {
+            "id": "media-002",
+            "type": "video",
+            "url": "https://video.wixstatic.com/video/c73128_97bcb73af5d041ea834776f9ea64edd4/1080p/mp4/file.mp4",
+            "description": ""
+        },
+        {
+            "id": "media-003",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_530f55b1c37543219581c8ee6ef5cb50~mv2.jpg",
+            "description": "המסלול מתחיל בפארק האקולוגי הוד השרון. התחילו לרוץ דרומה."
+        },
+        {
+            "id": "media-004",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_39f6d99c3cc1478cbee53f4e1c88925a~mv2.jpg",
+            "description": "רוצו כ-200 מטרים, ואז המשיכו לאורך השביל עד שתגיעו לנחל קטן."
+        },
+        {
+            "id": "media-006",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_31594b9bdeae46418a3df2e2e02b330f~mv2.jpg",
+            "description": "ניתן לחצות את הנחל או להישאר בצידו השמאלי (המזרחי) ולרוץ לצידו עד שתגיעו לשביל ישראל (כ-800 מטרים)."
+        },
+        {
+            "id": "media-007",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_1356f49460f9498d83e063039c932d48~mv2.jpg",
+            "description": "מכאן ממשיכים לרוץ לאורך שביל ישראל בכיוון מזרח עד לסיום המסלול. המסלול עובר לצד נחל הירקון ויעבור מתחת לשתי דרכים ראשיות דרך מנהרות."
+        },
+        {
+            "id": "media-007",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_4be4a3ab9abf4bf6a7ec93e2952eaca9~mv2.jpg",
+            "description": ""
+        }
+    ]
+}

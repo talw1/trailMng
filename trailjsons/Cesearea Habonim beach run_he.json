@@ -1,0 +1,43 @@
+{
+    "trailId": "Cesearea Habonim beach run",
+    "name": "קיסריה בונים",
+    "description": "המסלול עובר לאורך רצועת חוף מהיפות בישראל, ומשלב קטעים משביל ישראל ושביל הים. ניתן להתחיל אותו ממספר נקודות לאורך הדרך – תל דור, מעגן מיכאל, נחשולים או חוף הקשתות (האקוודוקט) בקיסריה – והוא מתאים לריצה הלוך-חזור. במקרה זה, מדובר במסלול חד-כיווני.\nהמסלול מתחיל בחוף הקשתות בקיסריה, וממשיך בריצה לאורך קו החוף עם נופים מרהיבים של הים התיכון. סמוך למעגן מיכאל פנינו כ-100 מטר מזרחה, ורצנו לצד בריכות הדגים. לאחר כמה מאות מטרים חזרנו לחוף והמשכנו צפונה.\nלאחר שעברנו את חוף קיבוץ נחשולים, הגענו לתל דור. משם המשכנו בדרך עפר  עד שהגענו לחוף הבונים. הסירה הטרופה שבחוף מסמנת את סיום המסלול. מנקודה זו ניתן לפנות מזרחה ולעלות על דרך עפר המובילה ליישוב הבונים.",
+    "media": [
+        {
+            "id": "media-001",
+            "type": "video",
+            "url": "https://video.wixstatic.com/video/c73128_f9118b7822e041cd8adc29ea1a986db0/1080p/mp4/file.mp4",
+            "description": ""
+        },
+        {
+            "id": "media-002",
+            "type": "video",
+            "url": "https://video.wixstatic.com/video/c73128_97bcb73af5d041ea834776f9ea64edd4/1080p/mp4/file.mp4",
+            "description": ""
+        },
+        {
+            "id": "media-003",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_530f55b1c37543219581c8ee6ef5cb50~mv2.jpg",
+            "description": ""
+        },
+        {
+            "id": "media-004",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_39f6d99c3cc1478cbee53f4e1c88925a~mv2.jpg",
+            "description": ""
+        },
+        {
+            "id": "media-006",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_31594b9bdeae46418a3df2e2e02b330f~mv2.jpg",
+            "description": ""
+        },
+        {
+            "id": "media-007",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_4be4a3ab9abf4bf6a7ec93e2952eaca9~mv2.jpg",
+            "description": ""
+        }
+    ]
+}

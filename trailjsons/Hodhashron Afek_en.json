@@ -1,0 +1,49 @@
+{
+    "trailId": "Hodhashron Afek",
+    "name": "HodHasharon Afek",
+    "description": "The trail begins at the Hod Hasharon Ecological Park, heading 1.3 kilometers south along the Hadar River until it connects with the marked Israel National Trail.\nFrom there, the route continues eastward, following the Yarkon River, all the way to the parking area of the Antipatris Fortress within Park Afek.\nPlease note:\nThere are two specific points along the trail where, if you start early in the morning, you may need to temporarily detour and then rejoin the Israel National Trail due to access restrictions or closed gates.",
+    "media": [
+        {
+            "id": "media-001",
+            "type": "video",
+            "url": "https://video.wixstatic.com/video/c73128_f9118b7822e041cd8adc29ea1a986db0/1080p/mp4/file.mp4",
+            "description": ""
+        },
+        {
+            "id": "media-002",
+            "type": "video",
+            "url": "https://video.wixstatic.com/video/c73128_97bcb73af5d041ea834776f9ea64edd4/1080p/mp4/file.mp4",
+            "description": ""
+        },
+        {
+            "id": "media-003",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_530f55b1c37543219581c8ee6ef5cb50~mv2.jpg",
+            "description": "The trail begins at the Hod Hasharon Ecological Park, Start running south "
+        },
+        {
+            "id": "media-004",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_39f6d99c3cc1478cbee53f4e1c88925a~mv2.jpg",
+            "description": "Run for about 200 meters, then follow the path until you reach a small stream."
+        },
+        {
+            "id": "media-006",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_31594b9bdeae46418a3df2e2e02b330f~mv2.jpg",
+            "description": "You can either cross the stream or stay on its left (eastern) side and run alongside it until you reach the Israel National Trail. (about 800 meters)"
+        },
+        {
+            "id": "media-007",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_1356f49460f9498d83e063039c932d48~mv2.jpg",
+            "description": "From here, you can follow the Israel National Trail heading east until the trail ends. You'll run alongside the Yarkon River and pass under two major roads via tunnels."
+        },
+        {
+            "id": "media-007",
+            "type": "image",
+            "url": "https://static.wixstatic.com/media/c73128_4be4a3ab9abf4bf6a7ec93e2952eaca9~mv2.jpg",
+            "description": ""
+        }
+    ]
+}
